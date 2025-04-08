@@ -119,7 +119,7 @@ app.get("/api/pnj", async (req, res) => {
 		await page.goto(process.env.PNJ_URL);
 
 		// Wait for the table to appear
-		await page.waitForSelector(".bang-gia-vang-outer table");
+		await page.waitForSelector(".sm\\:p-6.p-3 table tbody tr");
 
 		// Extract data from the second table
 		const data = await page.evaluate(() => {
