@@ -123,7 +123,7 @@ app.get("/api/pnj", async (req, res) => {
 
 		// Extract data from the second table
 		const data = await page.evaluate(() => {
-			const rows = Array.from(document.querySelectorAll(".bang-gia-vang-outer table tbody tr"));
+			const rows = Array.from(document.querySelectorAll(".sm\\:p-6.p-3 table tbody tr"));
 			return rows.map((row) => {
 				const columns = row.querySelectorAll("td");
 				return {
